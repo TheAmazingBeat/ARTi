@@ -1,6 +1,4 @@
-import React, { useContext } from 'react'
 import '../styles/backdrop.css'
-import { ItemsContext } from '../pages/ImageGen'
 
 export default function Backdrop({ page, loading, colorPalette }) {
   // const { colorPalette } = useContext(ItemsContext)

@@ -1,22 +1,19 @@
-import React, { useCallback, useContext } from 'react'
+import React, { useContext } from 'react'
 import {
   Card,
   Col,
   Image,
   useAccordionButton,
   Accordion,
-  Button,
-  Row,
 } from 'react-bootstrap'
 import styles from '../styles/components/board.module.css'
 import { BoardsStateContext } from '../pages/MyBoards'
 import { bufferToBase64 } from '../utils/BufferToBase64.js'
 import BoardExpand from '../components/BoardExpand'
-import Backdrop from './Backdrop'
 
 export default function Board({ board, boardIndex, callback }) {
-  const { user, setSelectedBoard } = useContext(BoardsStateContext)
-  const { boardName, images } = board
+  const { setSelectedBoard } = useContext(BoardsStateContext)
+  const { boardName } = board
 
   // uses react-bootstrap accordion stuff
   const expander = useAccordionButton(

@@ -8,23 +8,15 @@ import {
   Button,
   Image,
   Spinner,
-  Accordion,
   Form,
   InputGroup,
   OverlayTrigger,
   Tooltip,
 } from 'react-bootstrap'
-import React, {
-  useState,
-  useContext,
-  createContext,
-  useRef,
-  useEffect,
-} from 'react'
+import React, { useState, useContext, createContext, useRef } from 'react'
 import axios from 'axios'
 import Board from '../components/Board'
 import { UserAndBoardContext } from '../App'
-import { bufferToBase64 } from '../utils/BufferToBase64.js'
 import BoardPopup from '../components/BoardPopup'
 import Backdrop from '../components/Backdrop'
 import { ColorExtractor } from 'react-color-extractor'

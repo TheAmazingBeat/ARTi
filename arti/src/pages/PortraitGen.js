@@ -1,19 +1,12 @@
 import '../styles/pages/PortraitGen.css'
 import PortraitGenBtn from '../components/PortraitGenBtn'
-import { useContext, useRef, useState } from 'react'
-import PopUp from '../components/PopUp'
+import { useRef, useState } from 'react'
 import axios from 'axios'
 import Backdrop from '../components/Backdrop'
-import { UserAndBoardContext } from '../App'
 import { Container, Row, Col, Dropdown } from 'react-bootstrap'
 
 const PortraitGen = () => {
-  const { user } = useContext(UserAndBoardContext)
-
   const ageInput = useRef(null)
-  const genderInput = useRef(null)
-
-  const [buttonPopup, setButtonPopup] = useState(false)
   const [image, setImage] = useState('')
   const [sexOption, setSexOption] = useState('')
   // const [boardsArray, setBoardsArray] = useState([])

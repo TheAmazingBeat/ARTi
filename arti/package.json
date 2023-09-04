@@ -43,5 +43,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://arti-two.vercel.app"
+  "proxy": "http://localhost:8080"
 }
