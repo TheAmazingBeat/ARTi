@@ -22,9 +22,6 @@ const LoginForm = ({ loggedIn, setLoggedIn, setUser }) => {
     if (loggedIn) navigate('/imagegen')
   })
 
-  // TODO :: go back to previous route if already logged in to prevent user from logging in again
-  // -- find a way to return to previous route
-
   // Updates the username and password states
   function handleChange(event) {
     setFormData((prevFormData) => {
@@ -52,7 +49,10 @@ const LoginForm = ({ loggedIn, setLoggedIn, setUser }) => {
         setLoggedIn(true)
         // Allows App.js to have data of user
         setUser(
-          handleUser({ token: response.data.data, username: formData.username })
+          handleUser({
+            token: response.data.data.token,
+            username: formData.username,
+          })
         )
 
         // immediately goes to imagegen after loggin in
@@ -164,7 +164,7 @@ const LoginForm = ({ loggedIn, setLoggedIn, setUser }) => {
 
           {/* Footer */}
           <footer>
-            <Link to='/signup'>New to ArtI? Sign Up.</Link>
+            <Link to='/signup'>New to ARTi? Sign Up.</Link>
           </footer>
         </div>
       </Col>

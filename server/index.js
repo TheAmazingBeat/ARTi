@@ -15,6 +15,7 @@ const app = express()
 app.use(cors())
 app.use(express.json({ limit: '10mb' })) // allows express to parse req.body
 app.use(express.urlencoded({ extended: true }))
+app.set('Access-Control-Allow-Origin', '*')
 
 const PORT = 8080 || process.env.PORT
 
